@@ -76,21 +76,21 @@
                 </p>
 
                 <div class="flex gap-8 mt-12">
-                <div class="bg-neutral-primary-soft block flex-1 p-10 border border-default rounded-base shadow-xs hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out cursor-pointer" data-aos="fade-up" data-aos-duration="900" data-aos-delay="900">
+                <div class="bg-neutral-primary-soft block flex-1 p-10 border border-default rounded-base shadow-xs" data-aos="fade-up" data-aos-duration="900" data-aos-delay="900">
                     <img src="/Capstone Project/Public/pictures/arrow_selector_tool_24dp_3B82F6_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="w-12 h-12 mb-3 text-blue-600">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-heading">Easy & Convenient</h5>
                     </a>
                     <p class="mb-3 text-body text-gray-700">Browse appliances, place orders, and request repair services through a simple and user-friendly platform.</p>
                 </div>
-                <div class="bg-neutral-primary-soft block flex-1 p-10 border border-default rounded-base shadow-xs hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out cursor-pointer" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1200">
+                <div class="bg-neutral-primary-soft block flex-1 p-10 border border-default rounded-base shadow-xs" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1200">
                     <img src="/Capstone Project/Public/pictures/shield_lock_24dp_22C55E_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="w-12 h-12 mb-3 text-green-600">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-heading">Trusted Services</h5>
                     </a>
                     <p class="mb-3 text-body text-gray-700">We provide quality appliances and reliable repair services to ensure customer satisfaction and peace of mind.</p>
                 </div>
-                <div class="bg-neutral-primary-soft block flex-1 p-10 border border-default rounded-base shadow-xs hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out cursor-pointer" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1400">
+                <div class="bg-neutral-primary-soft block flex-1 p-10 border border-default rounded-base shadow-xs hover:shadow-lg" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1400">
                     <img src="/Capstone Project/Public/pictures/stacks_24dp_A855F7_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="w-12 h-12 mb-3 text-purple-600">
                     <a href="#">
                         <h5 class="mb-2 text-2xl font-semibold tracking-tight text-heading">All-in-One Solution</h5>
@@ -101,7 +101,7 @@
             </div>
         </section>
 
-        <section class="centered-section py-20 bg-gray-50" id="about">
+        <section class="centered-section py-20" id="about">
             <div class="px-8 lg:px-40">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
                     <div class="order-2 lg:order-1 flex items-center justify-center">
@@ -158,7 +158,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item flex-shrink-0" style="width: calc((100% - 48px) / 3);" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1200">
+                            <div class="carousel-item flex-shrink-0" style="width: calc((100% - 48px) / 3); " data-aos="fade-up" data-aos-duration="900" data-aos-delay="1200">
                                 <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm text-center">
                                     <blockquote class="mb-8">
                                         <h3 class="text-2xl font-semibold text-gray-900 mb-4">Solid foundation for any project</h3>
