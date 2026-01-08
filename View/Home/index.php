@@ -64,8 +64,8 @@
             </div>
         </section>
 
-        <section class="centered-section py-20" id="why-us">
-            <div class="px-8 lg:px-40">
+        <section class="centered-section min-h-screen flex items-center justify-center" id="why-us">
+            <div class="px-8 lg:px-40 w-full">
                 <div class="" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
                     <p class="text-sky-400 font-semibold text-lg text-center mb-4">- OUR SERVICES</p>
                     <h1 class="font-bold text-5xl text-center">Why Choose Our Platform</h1>
@@ -101,8 +101,8 @@
             </div>
         </section>
 
-        <section class="centered-section py-20" id="about">
-            <div class="px-8 lg:px-40">
+        <section class="centered-section min-h-screen flex items-center justify-center" id="about">
+            <div class="px-8 lg:px-40 w-full">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
                     <div class="order-2 lg:order-1 flex items-center justify-center">
                         <img src="/Capstone Project/Public/pictures/About us pic.png" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200" alt="About ClickCart" class="w-full h-auto rounded-lg">
@@ -131,8 +131,8 @@
             </div>
         </section>
         
-        <section class="centered-section py-20" id="testimonials">
-            <div class="px-8 lg:px-40">
+        <section class="centered-section min-h-screen flex items-center justify-center" id="testimonials">
+            <div class="px-8 lg:px-40 w-full">
                 <div class="" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
                     <p class="text-sky-400 font-semibold text-lg text-center mb-4">- TESTIMONIALS</p>
                     <h1 class="font-bold text-5xl text-center">What Our Customers Say</h1>
