@@ -24,7 +24,7 @@ section {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: oklch(74.6% 0.16 232.661);
+  background-color: #10b981;
   transition: width 0.3s ease;
 }
 

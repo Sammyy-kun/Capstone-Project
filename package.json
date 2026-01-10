@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Sammyy-kun/Capstone-Project#readme",
   "dependencies": {
+    "sweetalert2": "^11.26.17",
     "vue": "^3.5.26"
   }
 }

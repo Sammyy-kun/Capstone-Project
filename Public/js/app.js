@@ -55,37 +55,142 @@ const app = Vue.createApp({
                 items: [
                     {
                         id: 1,
-                        title: 'Very easy this was to integrate',
-                        quote: 'If you care for your time, I hands down would go with this.',
-                        name: 'Bonnie Green',
-                        position: 'Developer at Open AI',
+                        title: 'Excellent Service and Quality Products',
+                        quote: 'I purchased a refrigerator from FixMart and the entire process was smooth. Delivery was on time and the technician set it up perfectly!',
+                        name: 'Maria Santos',
+                        position: 'Homeowner',
                         avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png'
                     },
                     {
                         id: 2,
-                        title: 'Solid foundation for any project',
-                        quote: 'Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!',
-                        name: 'Roberta Casas',
-                        position: 'Lead designer at Dropbox',
+                        title: 'Fast and Reliable Repair Service',
+                        quote: 'My washing machine broke down and FixMart sent a technician the next day. It was fixed quickly and works perfectly now. Highly recommend!',
+                        name: 'Roberto Cruz',
+                        position: 'Business Owner',
                         avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png'
                     },
                     {
                         id: 3,
-                        title: 'Mindblowing workflow',
-                        quote: 'Aesthetically, the well designed components are beautiful and will undoubtedly level up your app.',
-                        name: 'Jese Leos',
-                        position: 'Software Engineer at Facebook',
+                        title: 'Great Platform for Appliances',
+                        quote: 'FixMart has everything I need - from buying new appliances to getting them repaired. The all-in-one solution makes life so much easier.',
+                        name: 'John Reyes',
+                        position: 'Property Manager',
                         avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png'
                     },
                     {
                         id: 4,
-                        title: 'Efficient Collaborating',
-                        quote: 'You have many examples that can be used to create a fast prototype for your team.',
-                        name: 'Joseph McFall',
-                        position: 'CTO at Google',
+                        title: 'Trusted Brands and Affordable Prices',
+                        quote: 'I love that FixMart offers all the major brands at competitive prices. I got a great deal on my air conditioner and the quality is excellent!',
+                        name: 'Anna Lopez',
+                        position: 'Teacher',
                         avatar: 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png'
                     }
                 ]
+           },
+           products:{
+                title: '- PRODUCTS',
+                heading: 'Trusted Appliance Brands in One Platform',
+                subHeading: 'We bring together well-known and reliable appliance brands to give you quality products and dependable repair services in one place.',
+                brands: [
+                    {
+                        id: 1,
+                        logo: '/Capstone Project/Public/pictures/samsung logo.png'
+                    },
+                    {
+                        id: 2,
+                        logo: '/Capstone Project/Public/pictures/lg logo.png'
+                    },
+                    {
+                        id: 3,
+                        logo: '/Capstone Project/Public/pictures/whirlpool logo.png'
+                    },
+                    {
+                        id: 4,
+                        logo: '/Capstone Project/Public/pictures/panasonic logo.png'
+                    },
+                    {
+                        id: 5,
+                        logo: '/Capstone Project/Public/pictures/sonny logo.png'
+                    },
+                    {
+                        id: 6,
+                        logo: '/Capstone Project/Public/pictures/sharp logo.png'
+                    }
+                ],
+                items: [
+                    {
+                        id: 1,
+                        name: 'Samsung Refrigerator',
+                        image: '/Capstone Project/Public/pictures/LG-Refrigerator-PNG-Transparent-Image.png',
+                        price: '₱45,999',
+                        category: 'Refrigerator',
+                        description: 'Energy-efficient double door refrigerator with smart cooling technology'
+                    },
+                    {
+                        id: 2,
+                        name: 'LG Washing Machine',
+                        image: '/Capstone Project/Public/pictures/vecteezy_modern-silver-washing-machine-with-digital-display-and-sleek_55983209.png',
+                        price: '₱28,500',
+                        category: 'Washing Machine',
+                        description: 'Front-load washer with digital display and multiple wash programs'
+                    },
+                    {
+                        id: 3,
+                        name: 'Panasonic Air Conditioner',
+                        image: '/Capstone Project/Public/pictures/Air-Conditioner-Transparent-Images-PNG.png',
+                        price: '₱32,900',
+                        category: 'Air Conditioner',
+                        description: 'Inverter split-type AC with powerful cooling and energy-saving features'
+                    },
+                    {
+                        id: 4,
+                        name: 'Smart TV 55 inch',
+                        image: '/Capstone Project/Public/pictures/vecteezy_black-tv-screen-with-blank-screen_46013247.png',
+                        price: '₱38,999',
+                        category: 'Television',
+                        description: '4K UHD Smart TV with streaming apps and voice control'
+                    },
+                    {
+                        id: 5,
+                        name: 'Electric Fan',
+                        image: '/Capstone Project/Public/pictures/—Pngtree—a modern electric fan_16046829.png',
+                        price: '₱2,499',
+                        category: 'Fan',
+                        description: 'Standing fan with oscillation and adjustable speed settings'
+                    },
+                    {
+                        id: 6,
+                        name: 'Whirlpool Refrigerator',
+                        image: '/Capstone Project/Public/pictures/pngimg.com - refrigerator_PNG101548.png',
+                        price: '₱42,500',
+                        category: 'Refrigerator',
+                        description: 'Spacious side-by-side refrigerator with water dispenser'
+                    },
+                    {
+                        id: 7,
+                        name: 'Microwave Oven',
+                        image: '/Capstone Project/Public/pictures/microwave.png',
+                        price: '₱8,999',
+                        category: 'Microwave',
+                        description: 'Compact microwave with auto-cook menus and defrost function'
+                    },
+                    {
+                        id: 8,
+                        name: 'Water Dispenser',
+                        image: '/Capstone Project/Public/pictures/water dispenser.png',
+                        price: '₱5,999',
+                        category: 'Water Dispenser',
+                        description: 'Hot and cold water dispenser with safety lock feature'
+                    }
+                ]
+           },
+           cta: {
+                heading: 'Ready to Upgrade Your Home?',
+                description: 'Explore our wide range of quality home appliances and reliable repair services. Get started today!',
+                primaryBtnText: 'Shop Now',
+                primaryBtnLink: '#products',
+                secondaryBtnText: 'Request Repair',
+                secondaryBtnLink: '../Repair/create.php'
            }
         }
     }
