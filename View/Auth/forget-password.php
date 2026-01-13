@@ -2,9 +2,9 @@
 <body>
     <header>
         <nav class="fixed top-0 z-50 w-full flex items-center justify-between px-8 lg:px-40 py-4 shadow-md bg-white">
-            <h1 class="text-2xl font-bold text-sky-400">FixMart</h1>
+            <h1 class="text-2xl font-bold text-emerald-500">FixMart</h1>
             <div class="flex items-center gap-8 lg:gap-12">
-                <a href="../Home/index.php" class="nav-link text-black hover:text-sky-400 transition duration-300 ease-in-out px-2">Home</a>
+                <a href="../User/Home/index.php" class="nav-link text-black hover:text-emerald-500 transition duration-300 ease-in-out px-2">Home</a>
             </div>
         </nav>
     </header>
@@ -19,19 +19,19 @@
                         <div class="mb-6">
                             <label class="block mb-3 font-semibold">Email Address</label>
                             <input type="email" id="email" name="email" required 
-                                class="w-full h-12 rounded-md border-2 border-gray-200 focus:outline-sky-500 px-4 py-3">
+                                class="w-full h-12 rounded-md border-2 border-gray-200 focus:outline-emerald-500 px-4 py-3">
                         </div>
 
                         <div class="mb-6">
                             <button type="submit" 
-                                class="w-full h-12 font-semibold bg-sky-400 text-white rounded-lg hover:bg-sky-500 transition duration-300">
+                                class="w-full h-12 font-semibold bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition duration-300">
                                 Send Code
                             </button>
                         </div>
                     </form>
 
                     <div class="text-center mt-1">
-                        <h1>Remember your password? <a href="login.php" class="text-sky-400">Sign in</a></h1>
+                        <h1>Remember your password? <a href="login.php" class="text-emerald-500">Sign in</a></h1>
                     </div>
                 </div>
 
@@ -43,25 +43,25 @@
                         <div class="mb-6">
                             <label class="block mb-3 font-semibold text-center">Enter 6-digit code</label>
                             <div class="flex justify-center gap-2">
-                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-sky-500 focus:border-sky-400" data-index="0">
-                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-sky-500 focus:border-sky-400" data-index="1">
-                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-sky-500 focus:border-sky-400" data-index="2">
-                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-sky-500 focus:border-sky-400" data-index="3">
-                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-sky-500 focus:border-sky-400" data-index="4">
-                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-sky-500 focus:border-sky-400" data-index="5">
+                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-emerald-500 focus:border-emerald-500" data-index="0">
+                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-emerald-500 focus:border-emerald-500" data-index="1">
+                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-emerald-500 focus:border-emerald-500" data-index="2">
+                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-emerald-500 focus:border-emerald-500" data-index="3">
+                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-emerald-500 focus:border-emerald-500" data-index="4">
+                                <input type="text" maxlength="1" class="otp-input w-12 h-12 text-center text-xl font-semibold rounded-md border-2 border-gray-200 focus:outline-emerald-500 focus:border-emerald-500" data-index="5">
                             </div>
                         </div>
 
                         <div class="mb-6">
                             <button type="submit" 
-                                class="w-full h-12 font-semibold bg-sky-400 text-white rounded-lg hover:bg-sky-500 transition duration-300">
+                                class="w-full h-12 font-semibold bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition duration-300">
                                 Verify Code
                             </button>
                         </div>
 
                         <div class="text-center">
                             <p class="text-sm text-gray-600">Didn't receive the code? 
-                                <button type="button" id="resendBtn" class="text-sky-400 hover:text-sky-500 font-semibold">Resend</button>
+                                <button type="button" id="resendBtn" class="text-emerald-500 hover:text-emerald-600 font-semibold">Resend</button>
                             </p>
                         </div>
                     </form>
@@ -75,18 +75,18 @@
                         <div class="mb-6">
                             <label class="block mb-3 font-semibold">New Password</label>
                             <input type="password" id="newPassword" name="newPassword" required 
-                                class="w-full h-12 rounded-md border-2 border-gray-200 focus:outline-sky-500 px-4 py-3">
+                                class="w-full h-12 rounded-md border-2 border-gray-200 focus:outline-emerald-500 px-4 py-3">
                         </div>
 
                         <div class="mb-6">
                             <label class="block mb-3 font-semibold">Confirm Password</label>
                             <input type="password" id="confirmPassword" name="confirmPassword" required 
-                                class="w-full h-12 rounded-md border-2 border-gray-200 focus:outline-sky-500 px-4 py-3">
+                                class="w-full h-12 rounded-md border-2 border-gray-200 focus:outline-emerald-500 px-4 py-3">
                         </div>
 
                         <div class="mb-6">
                             <button type="submit" 
-                                class="w-full h-12 font-semibold bg-sky-400 text-white rounded-lg hover:bg-sky-500 transition duration-300">
+                                class="w-full h-12 font-semibold bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition duration-300">
                                 Reset Password
                             </button>
                         </div>

@@ -5,7 +5,7 @@ const app = Vue.createApp({
                 heading: 'Upgrade Your Home with ',
                 headingHighlight: 'Ease',
                 description: 'An easy-to-use online platform where users can browse and purchase home appliances, track orders, and conveniently request repair services in one integrated system.',
-                image: '../../Public/pictures/iphone 15 copy.png',
+                image: '../../../Public/pictures/Group 2 copy.png',
                 ctaText: 'Shop Now!',
                 ctaLink: '#products'
            },
@@ -16,19 +16,19 @@ const app = Vue.createApp({
                 cards: [
                     {
                         id: 1,
-                        icon: '../../Public/pictures/arrow_selector_tool_24dp_3B82F6_FILL0_wght400_GRAD0_opsz24.svg',
+                        icon: '../../../Public/pictures/arrow_selector_tool_24dp_3B82F6_FILL0_wght400_GRAD0_opsz24.svg',
                         title: 'Easy & Convenient',
                         description: 'Browse appliances, place orders, and request repair services through a simple and user-friendly platform.'
                     },
                     {
                         id: 2,
-                        icon: '../../Public/pictures/shield_lock_24dp_22C55E_FILL0_wght400_GRAD0_opsz24.svg',
+                        icon: '../../../Public/pictures/shield_lock_24dp_22C55E_FILL0_wght400_GRAD0_opsz24.svg',
                         title: 'Trusted Services',
                         description: 'We provide quality appliances and reliable repair services to ensure customer satisfaction and peace of mind.'
                     },
                     {
                         id: 3,
-                        icon: '../../Public/pictures/stacks_24dp_A855F7_FILL0_wght400_GRAD0_opsz24.svg',
+                        icon: '../../../Public/pictures/stacks_24dp_A855F7_FILL0_wght400_GRAD0_opsz24.svg',
                         title: 'All-in-One Solution',
                         description: 'Manage purchases, track orders, and schedule appliance repairs in one integrated system.'
                     }
@@ -38,15 +38,15 @@ const app = Vue.createApp({
                 title: '- ABOUT US',
                 heading: 'Your Trusted Platform for Appliances and Repair Service',
                 description: 'FixMart is a modern e-commerce platform designed to make buying and maintaining home appliances simple, reliable, and convenient. Our system brings together appliance sales and repair services in one easy-to-use platform, helping customers find quality products and dependable technicians in just a few clicks.',
-                image: '../../Public/pictures/About us pic.png',
+                image: '../../../Public/pictures/About us pic.png',
                 features: [
                     'Online selling of various home appliances',
                     'Easy browsing and searching of products',
                     'Appliance repair and maintenance services'
                 ],
-                checkIcon: '../../Public/pictures/check_circle_24dp_83A9E6_FILL0_wght400_GRAD0_opsz24.svg',
+                checkIcon: '../../../Public/pictures/check.svg',
                 ctaText: 'Explore Now',
-                arrowIcon: '../../Public/pictures/arrow_right_alt_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg'
+                arrowIcon: '../../../Public/pictures/arrow_right_alt_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg'
            },
            testimonials: {
                 title: '- TESTIMONIALS',
@@ -94,34 +94,34 @@ const app = Vue.createApp({
                 brands: [
                     {
                         id: 1,
-                        logo: '/Capstone Project/Public/pictures/samsung logo.png'
+                        logo: '../../../Public/pictures/samsung logo.png'
                     },
                     {
                         id: 2,
-                        logo: '/Capstone Project/Public/pictures/lg logo.png'
+                        logo: '../../../Public/pictures/lg logo.png'
                     },
                     {
                         id: 3,
-                        logo: '/Capstone Project/Public/pictures/whirlpool logo.png'
+                        logo: '../../../Public/pictures/whirlpool logo.png'
                     },
                     {
                         id: 4,
-                        logo: '/Capstone Project/Public/pictures/panasonic logo.png'
+                        logo: '../../../Public/pictures/panasonic logo.png'
                     },
                     {
                         id: 5,
-                        logo: '/Capstone Project/Public/pictures/sonny logo.png'
+                        logo: '../../../Public/pictures/sonny logo.png'
                     },
                     {
                         id: 6,
-                        logo: '/Capstone Project/Public/pictures/sharp logo.png'
+                        logo: '../../../Public/pictures/sharp logo.png'
                     }
                 ],
                 items: [
                     {
                         id: 1,
                         name: 'Samsung Refrigerator',
-                        image: '/Capstone Project/Public/pictures/LG-Refrigerator-PNG-Transparent-Image.png',
+                        image: '../../../Public/pictures/LG-Refrigerator-PNG-Transparent-Image.png',
                         price: '₱45,999',
                         category: 'Refrigerator',
                         description: 'Energy-efficient double door refrigerator with smart cooling technology'
@@ -129,7 +129,7 @@ const app = Vue.createApp({
                     {
                         id: 2,
                         name: 'LG Washing Machine',
-                        image: '/Capstone Project/Public/pictures/vecteezy_modern-silver-washing-machine-with-digital-display-and-sleek_55983209.png',
+                        image: '../../../Public/pictures/vecteezy_modern-silver-washing-machine-with-digital-display-and-sleek_55983209.png',
                         price: '₱28,500',
                         category: 'Washing Machine',
                         description: 'Front-load washer with digital display and multiple wash programs'
@@ -137,7 +137,7 @@ const app = Vue.createApp({
                     {
                         id: 3,
                         name: 'Panasonic Air Conditioner',
-                        image: '/Capstone Project/Public/pictures/Air-Conditioner-Transparent-Images-PNG.png',
+                        image: '../../../Public/pictures/Air-Conditioner-Transparent-Images-PNG.png',
                         price: '₱32,900',
                         category: 'Air Conditioner',
                         description: 'Inverter split-type AC with powerful cooling and energy-saving features'
@@ -145,7 +145,7 @@ const app = Vue.createApp({
                     {
                         id: 4,
                         name: 'Smart TV 55 inch',
-                        image: '/Capstone Project/Public/pictures/vecteezy_black-tv-screen-with-blank-screen_46013247.png',
+                        image: '../../../Public/pictures/vecteezy_black-tv-screen-with-blank-screen_46013247.png',
                         price: '₱38,999',
                         category: 'Television',
                         description: '4K UHD Smart TV with streaming apps and voice control'
@@ -153,7 +153,7 @@ const app = Vue.createApp({
                     {
                         id: 5,
                         name: 'Electric Fan',
-                        image: '/Capstone Project/Public/pictures/—Pngtree—a modern electric fan_16046829.png',
+                        image: '../../../Public/pictures/—Pngtree—a modern electric fan_16046829.png',
                         price: '₱2,499',
                         category: 'Fan',
                         description: 'Standing fan with oscillation and adjustable speed settings'
@@ -161,7 +161,7 @@ const app = Vue.createApp({
                     {
                         id: 6,
                         name: 'Whirlpool Refrigerator',
-                        image: '/Capstone Project/Public/pictures/pngimg.com - refrigerator_PNG101548.png',
+                        image: '../../../Public/pictures/pngimg.com - refrigerator_PNG101548.png',
                         price: '₱42,500',
                         category: 'Refrigerator',
                         description: 'Spacious side-by-side refrigerator with water dispenser'
@@ -169,7 +169,7 @@ const app = Vue.createApp({
                     {
                         id: 7,
                         name: 'Microwave Oven',
-                        image: '/Capstone Project/Public/pictures/microwave.png',
+                        image: '../../../Public/pictures/microwave.png',
                         price: '₱8,999',
                         category: 'Microwave',
                         description: 'Compact microwave with auto-cook menus and defrost function'
@@ -177,7 +177,7 @@ const app = Vue.createApp({
                     {
                         id: 8,
                         name: 'Water Dispenser',
-                        image: '/Capstone Project/Public/pictures/water dispenser.png',
+                        image: '../../../Public/pictures/water dispenser.png',
                         price: '₱5,999',
                         category: 'Water Dispenser',
                         description: 'Hot and cold water dispenser with safety lock feature'

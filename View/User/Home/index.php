@@ -1,4 +1,4 @@
-<?php require '../Layouts/header.php'; ?>
+<?php require '../../Layouts/header.php'; ?>
 <body>
     <!--Navbar to-->
     <header>
@@ -10,7 +10,7 @@
                 <a href="#products" class="nav-link text-black hover:text-emerald-500 transition duration-300 ease-in-out px-2" data-aos="fade-down" data-aos-duration="900" data-aos-delay="600">Products</a>
                 <a href="#contact" class="nav-link text-black hover:text-emerald-500 transition duration-300 ease-in-out px-2" data-aos="fade-down" data-aos-duration="900" data-aos-delay="900">Contact</a>
                 <div class="flex items-center gap-4">
-                <a href="../Auth/login.php" class="bg-emerald-500  text-white px-10 py-3 rounded-md font-semibold hover:bg-emerald-600 transition duration-300 ease-in-out" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1100">Login</a>
+                <a href="../../Auth/login.php" class="bg-emerald-500  text-white px-10 py-3 rounded-md font-semibold hover:bg-emerald-600 transition duration-300 ease-in-out" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1100">Login</a>
             </div>
         </nav>
     </header>
@@ -115,19 +115,19 @@
          <section class="centered-section min-h-screen flex items-center justify-center" id="products">
             <div class="px-8 lg:px-40 w-full">
                 <div class="">
-                    <p class="text-emerald-500 font-semibold text-lg text-center mb-4">{{  products.title }}</p>
-                    <h1 class="font-bold text-5xl text-center">{{ products.heading }}</h1>
+                    <p class="text-emerald-500 font-semibold text-lg text-center mb-4" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">{{  products.title }}</p>
+                    <h1 class="font-bold text-5xl text-center"data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">{{ products.heading }}</h1>
                 </div>
-                <p class="text-lg text-gray-700 my-8 text-center max-w-3xl mx-auto"> {{ products.subHeading }}</p>
+                <p class="text-lg text-gray-700 my-8 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="900" data-aos-delay="900"> {{ products.subHeading }}</p>
                 
-                <div class="flex flex-wrap items-center justify-center gap-12 lg:gap-16 mt-16">
+                <div class="flex flex-wrap items-center justify-center gap-12 lg:gap-16 mt-16" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1200">
                     <div v-for="(brand, index) in products.brands" :key="brand.id" class="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300 opacity-70 hover:opacity-100">
                         <img :src="brand.logo" :alt="brand.name" class="h-12 lg:h-16 w-auto object-contain">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-20">
-                    <div v-for="(item, index) in products.items" :key="item.id" class="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col">
+                    <div v-for="(item, index) in products.items" :key="item.id" class="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1250">
                         <div class="flex items-center justify-center mb-4 h-36">
                             <img :src="item.image" :alt="item.name" class="max-w-full max-h-full object-contain">
                         </div>
@@ -144,7 +144,7 @@
         </section>
         
         <section class="centered-section min-h-screen flex items-center justify-center" id="testimonials">
-            <div class="px-8 lg:px-40 w-full">
+            <div class="px-8 lg:px-40 w-full mt-40 mb-15">
                 <div class="" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
                     <p class="text-emerald-500 font-semibold text-lg text-center mb-4">{{ testimonials.title }}</p>
                     <h1 class="font-bold text-5xl text-center">{{ testimonials.heading }}</h1>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-2xl shadow-2xl p-12 lg:p-16 mt-16 bg-emerald-600" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
+                    <div class="rounded-2xl shadow-2xl p-12 lg:p-16 mt-16 bg-emerald-600" data-aos="fade-up" data-aos-duration="900" data-aos-delay="800">
                         <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
                             <div class="text-white max-w-2xl">
                                 <p class="text-sm font-semibold mb-3 opacity-90">GET STARTED</p>
@@ -189,7 +189,7 @@
     </main>
 
     <footer class="footer sm:footer-horizontal bg-gray-50 text-base-content p-10">
-             <aside>
+            <aside>
                 <h6 class="text-2xl font-bold text-gray-700">FixMart</h6>
                 <p>Your trusted online shopping destination.<br/>Providing quality products since 2020.</p>
             </aside>
@@ -214,11 +214,10 @@
                 <a class="link link-hover">Cookie policy</a>
             </nav>
     </footer>
-    <script src="/Capstone Project/Public/js/app.js"></script>
+    <script src="../../../Public/js/User/landing-page.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="/Capstone Project/Public/js/style.js"></script>
 </body>
 </html>
 
