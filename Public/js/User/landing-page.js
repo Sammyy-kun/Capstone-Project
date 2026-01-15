@@ -31,6 +31,24 @@ const app = Vue.createApp({
                         icon: '../../../Public/pictures/stacks_24dp_A855F7_FILL0_wght400_GRAD0_opsz24.svg',
                         title: 'All-in-One Solution',
                         description: 'Manage purchases, track orders, and schedule appliance repairs in one integrated system.'
+                    },
+                    {
+                        id: 4,
+                        icon: '../../../Public/pictures/paper clip.svg',
+                        title: 'Simple Application',
+                        description: 'Apply your business in just a few easy steps. Submit your business information and required details for quick review and approval.'
+                    },
+                    {
+                        id: 5,
+                        icon: '../../../Public/pictures/lock.svg',
+                        title: 'Verified Partnership',
+                        description: 'Once approved, your business becomes a trusted partner on our platform, helping customers feel confident when choosing your products and services.'
+                    },
+                    {
+                        id: 6,
+                        icon: '../../../Public/pictures/chart.svg',
+                        title: 'Manage & Grow',
+                        description: 'Easily add products, manage orders, and handle repair requests using a dedicated dashboard built for business owners.'
                     }
                 ]
            },

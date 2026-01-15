@@ -68,7 +68,9 @@
     </header>
     <main class="transition-all duration-300 ease-in-out mt-10 px-10 py-10" :class="{'lg:ml-64': sidebarOpen}">
         <h1 class="font-medium text-2xl">Dashboard</h1>
+       
     </main>
+    <script src="../../../Public/js/owner/dashboard.js"></script>
 </div>
 </body>
 </html>

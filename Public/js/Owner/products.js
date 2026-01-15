@@ -1,6 +1,6 @@
 const app = Vue.createApp({
     data(){
-        return{
+         return{
             sidebarOpen: true,
             user: {
                 //Here dapat kukunin yung name from database kase dynamic
@@ -12,14 +12,14 @@ const app = Vue.createApp({
                     title: 'Main',
                     isOpen: true,
                     items: [
-                        { name: 'Dashboard', icon: 'dashboard', link:'../Dashboard/dashboard.php', active: true }
+                        { name: 'Dashboard', icon: 'dashboard', link:'../Dashboard/dashboard.php' }
                     ]
                 },
                 {
                     title: 'Management',
                     isOpen: true,
                     items: [
-                        { name: 'Products', icon: 'products', link: '../Products/add-products.php' },
+                        { name: 'Products', icon: 'products', link: '../Products/add-products.php', active: true },
                         { name: 'Categories', icon: 'categories', link: '#' },
                         { name: 'Orders', icon: 'orders', link: '#' },
                         { name: 'Payments', icon: 'payments', link: '#' }

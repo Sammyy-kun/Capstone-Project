@@ -9,8 +9,9 @@
                 <a href="#about" class="nav-link text-black hover:text-emerald-500 transition duration-300 ease-in-out px-2" data-aos="fade-down" data-aos-duration="900" data-aos-delay="400" >About Us</a>
                 <a href="#products" class="nav-link text-black hover:text-emerald-500 transition duration-300 ease-in-out px-2" data-aos="fade-down" data-aos-duration="900" data-aos-delay="600">Products</a>
                 <a href="#contact" class="nav-link text-black hover:text-emerald-500 transition duration-300 ease-in-out px-2" data-aos="fade-down" data-aos-duration="900" data-aos-delay="900">Contact</a>
+                <a href="../../Auth/User/login.php" class="nav-link text-black hover:text-emerald-500 transition duration-300 ease-in-out px-2" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1100">Login</a>
                 <div class="flex items-center gap-4">
-                <a href="../../Auth/login.php" class="bg-emerald-500  text-white px-10 py-3 rounded-md font-semibold hover:bg-emerald-600 transition duration-300 ease-in-out" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1100">Login</a>
+                <a href="../Roles/selection.php" class="bg-emerald-500  text-white px-10 py-3 rounded-md font-semibold hover:bg-emerald-600 transition duration-300 ease-in-out" data-aos="fade-down" data-aos-duration="900" data-aos-delay="1300">Get Started</a>
             </div>
         </nav>
     </header>
@@ -19,9 +20,9 @@
             <div class="relative w-full">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-start h-auto lg:h-[80vh] px-8 lg:px-40 py-16 gap-8">
                     <div class="flex flex-col mt-12">
-                        <h1 class="text-7xl font-bold text-black leading-tight" data-aos="fade-right" data-aos-duration="900" data-aos-delay="600">{{ hero.heading }}<span class="text-emerald-600">{{ hero.headingHighlight }}</span></h1>
+                        <h1 class="text-7xl font-bold text-black leading-tight" data-aos="fade-right" data-aos-duration="900" data-aos-delay="600">{{ hero.heading }}<span class="text-emerald-500">{{ hero.headingHighlight }}</span></h1>
                         <p class="mt-7 text-xl lg:text-xl text-gray-600" data-aos="fade-right" data-aos-duration="900" data-aos-delay="900">{{ hero.description }}</p>
-                        <a :href="hero.ctaLink" class="bg-emerald-600 text-white w-48 py-4 px-5 rounded-lg font-semibold hover:bg-emerald-700 transition duration-300 ease-in-out text-center mt-10" data-aos="fade-right" data-aos-duration="900" data-aos-delay="1200">
+                        <a :href="hero.ctaLink" class="bg-emerald-500 text-white w-48 py-4 px-5 rounded-lg font-semibold hover:bg-emerald-700 transition duration-300 ease-in-out text-center mt-10" data-aos="fade-right" data-aos-duration="900" data-aos-delay="1200">
                             {{ hero.ctaText }}
                         </a>
                         <div class="flex gap-3 mt-7">
@@ -72,8 +73,8 @@
                 </div>
                 <p class="text-lg text-gray-700 my-8 text-center max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600"> {{ whyUs.subHeading }}</p>
 
-                <div class="flex gap-8 mt-12">
-                    <div v-for="(card, index) in whyUs.cards" :key="card.id" class="bg-neutral-primary-soft block flex-1 p-10 border border-default rounded-base shadow-xs" data-aos="fade-up" data-aos-duration="900" :data-aos-delay="900 + (index * 300)">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                    <div v-for="(card, index) in whyUs.cards" :key="card.id" class="bg-neutral-primary-soft block p-10 border border-default rounded-lg shadow-xs" data-aos="fade-up" data-aos-duration="900" :data-aos-delay="900 + (index * 300)">
                         <img :src="card.icon" alt="" class="w-12 h-12 mb-3">
                         <a href="#">
                             <h5 class="mb-2 text-2xl font-semibold tracking-tight text-heading">{{ card.title }}</h5>
@@ -191,7 +192,7 @@
     <footer class="footer sm:footer-horizontal bg-gray-50 text-base-content p-10">
             <aside>
                 <h6 class="text-2xl font-bold text-gray-700">FixMart</h6>
-                <p>Your trusted online shopping destination.<br/>Providing quality products since 2020.</p>
+                <p>Your trusted online shopping destination.<br/>Providing quality products since 2026.</p>
             </aside>
             <nav>
                 <h6 class="footer-title">Services</h6>

@@ -24,7 +24,7 @@ const app = Vue.createApp({
                     title: 'Main',
                     isOpen: true,
                     items: [
-                        { name: 'Dashboard', icon: 'dashboard', link: 'home-page.php', active: true }
+                        { name: 'Dashboard', icon: 'dashboard', link: 'dashboard.php', active: true }
                     ]
                 },
                 {

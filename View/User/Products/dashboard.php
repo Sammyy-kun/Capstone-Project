@@ -28,7 +28,7 @@
         </nav>
 
         <transition name="slide-in">
-            <aside v-show="sidebarOpen" class="fixed left-0 top-[3.5rem] flex flex-col w-64 h-[calc(100vh-3.5rem)] px-4 py-8 overflow-y-auto bg-white border-r border-gray-200 shadow-lg z-50">
+            <aside v-show="sidebarOpen" class="fixed left-0 top-[3.5rem] flex flex-col w-64 h-[calc(100vh-3.5rem)] px-4 py-6 overflow-y-auto bg-white border-r border-gray-200 z-50">
             <div class="flex flex-col justify-between flex-1">
                 <nav>
                     <div v-for="(group, index) in menuGroups" :key="index" class="mb-4">
@@ -58,7 +58,7 @@
         </transition>
     </header>
     <main class="transition-all duration-300 ease-in-out mt-10 px-10 py-10" :class="{'lg:ml-64': sidebarOpen}">
-        <h1 class="font-semibold text-2xl">Products</h1>
+        <h1 class="font-medium text-2xl">Products</h1>
         <div class="flex flex-col sm:flex-row gap-4 mt-5 items-start sm:items-center justify-between">
             <form class="sm:flex sm:items-center flex-1">
                 <input v-model="searchQuery" id="q" name="q" class="inline w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-3 leading-5 placeholder-gray-500 focus:border-emerald-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-emerald-500 sm:text-sm" placeholder="Search products..." type="search" autofocus="">
@@ -96,8 +96,11 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
                                 </svg>
                             </button>
-                            <button :disabled="product.stock <= 0" :class="product.stock <= 0 ? 'bg-gray-300 cursor-not-allowed' : 'bg-emerald-500 hover:bg-emerald-600'" class="text-white py-2 px-5 rounded-lg font-medium transition-colors duration-200 whitespace-nowrap">
-                                {{ product.stock <= 0 ? 'Unavailable' : 'Buy' }}
+                            <a v-if="product.stock > 0" href="view-product.php" class="bg-emerald-500 hover:bg-emerald-600 text-white py-2 px-5 rounded-lg font-medium transition-colors duration-200 whitespace-nowrap">
+                                Buy
+                            </a>
+                            <button v-else disabled class="bg-gray-300 cursor-not-allowed text-white py-2 px-5 rounded-lg font-medium transition-colors duration-200 whitespace-nowrap">
+                                Unavailable
                             </button>
                         </div>
                     </div>
