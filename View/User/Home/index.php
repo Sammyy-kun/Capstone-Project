@@ -89,7 +89,7 @@
             <div class="px-8 lg:px-40 w-full">
                 <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
                     <div class="order-2 lg:order-1 flex items-center justify-center">
-                        <img :src="about.image" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200" alt="About ClickCart" class="w-full h-auto rounded-lg">
+                        <img loading="lazy" :src="about.image" data-aos="fade-right" data-aos-duration="900" data-aos-delay="200" alt="About ClickCart" class="w-full h-auto rounded-lg">
                     </div>
                     <div class="order-1 lg:order-2 space-y-6">
                         <div class="" data-aos="fade-left" data-aos-duration="900" data-aos-delay="600">
@@ -123,14 +123,14 @@
                 
                 <div class="flex flex-wrap items-center justify-center gap-12 lg:gap-16 mt-16" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1200">
                     <div v-for="(brand, index) in products.brands" :key="brand.id" class="flex items-center justify-center grayscale hover:grayscale-0 transition duration-300 opacity-70 hover:opacity-100">
-                        <img :src="brand.logo" :alt="brand.name" class="h-12 lg:h-16 w-auto object-contain">
+                        <img loading="lazy" :src="brand.logo" :alt="brand.name" class="h-12 lg:h-16 w-auto object-contain">
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-20">
                     <div v-for="(item, index) in products.items" :key="item.id" class="bg-white p-5 border border-gray-200 rounded-lg shadow-sm flex flex-col" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1250">
                         <div class="flex items-center justify-center mb-4 h-36">
-                            <img :src="item.image" :alt="item.name" class="max-w-full max-h-full object-contain">
+                            <img loading="lazy" :src="item.image" :alt="item.name" class="max-w-full max-h-full object-contain">
                         </div>
                         <p class="text-xs text-emerald-500 font-semibold mb-1">{{ item.category }}</p>
                         <h3 class="text-base font-semibold text-gray-900 mb-2">{{ item.name }}</h3>
