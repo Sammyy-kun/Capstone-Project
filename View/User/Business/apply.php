@@ -8,8 +8,9 @@
         </nav>
     </header>
     <main id="app" class="pt-20">
-         <div class="mx-auto px-8 lg:px-40 ">
-        <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
+        <div class="mx-auto px-8 lg:px-40 ">
+            <h1 class="text-black text-3xl font-semibold mb-3">Business Form</h1>
+        <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4">
             <div class="grid grid-cols-5">
                 <!--First Progress-->
                 <div class="relative p-6 border-r border-gray-200">
