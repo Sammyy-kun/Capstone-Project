@@ -18,7 +18,7 @@ const app = Vue.createApp({
                     title: 'Users',
                     isOpen: true,
                     items: [
-                        { name: 'Users', icon: 'users', link: '../Accounts/users.php', active: false },
+                        { name: 'Users', icon: 'users', link: '../Accounts/users.php', active: true },
                         { name: 'Owners', icon: 'owners', link: '../Accounts/owners.php', active: false }
                     ]
                 },
@@ -26,7 +26,7 @@ const app = Vue.createApp({
                     title: 'Business',
                     isOpen: true,
                     items: [
-                        { name: 'Business Request', icon: 'business', link: '../Business/application.php', active: true }
+                        { name: 'Business Request', icon: 'business', link: '../Business/application.php', active: false }
                     ]
                 },
                 {

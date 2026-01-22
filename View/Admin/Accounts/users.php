@@ -67,15 +67,14 @@
         </transition>
     </header>
     <main class="transition-all duration-300 ease-in-out mt-10 px-10 py-10" :class="{'lg:ml-64': sidebarOpen}">
-        <h1 class="font-medium text-2xl">Business Request</h1>
+        <h1 class="font-medium text-2xl">Users</h1>
 
         <div class="mt-5 bg-white border border-gray-200 rounded-lg p-10 lg:h-190">
-            <h1 class="text-xl font-medium text-gray-900 mb-6">Pending Business Requests</h1>
+            <h1 class="text-xl font-medium text-gray-900 mb-6">List of registered users</h1>
             <!--Here yung data tables-->
         </div>
     </main>
-    <script src="../../../Public/js/Admin/application.js"></script>
-</div>
+    <script src="../../../Public/js/Admin/users.js"></script>
 </div>
 </body>
 </html>

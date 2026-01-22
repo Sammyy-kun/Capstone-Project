@@ -39,7 +39,41 @@ const app = Vue.createApp({
                     ]
                 }
             ],
-            logoutLink: { name: 'Logout', icon: 'logout', link: '../../Auth/logout.php' }
+            logoutLink: { name: 'Logout', icon: 'logout', link: '../../Auth/logout.php' },
+
+            ownersInfo:{
+                firstname: 'Van Keymel',
+                lastname: 'Paelma',
+                email: 'vankeymelpaelma@email.com',
+                mobileNo: '+63 912 345 6789',
+                idType: 'PWD ID',
+                governmentId: 'PWD-2024-12345',
+                governmentIdImage: '../../../Public/pictures/Philippine_generic_PWD_ID_sample.svg'
+            },
+            businessInfo:{
+                businessName: 'FixMart Services',
+                businessType: 'Repair Shop',
+                businessAddress: '123 Main Street, Quezon City, Metro Manila',
+                businessEmail: 'info@fixmartservices.com',
+                businessContactNo: '+63 2 8123 4567',
+                businessDescription: 'Professional repair services for electronics and appliances',
+                yearsInOperation: '5 years'
+            },
+            productServices:{
+                serviceDescription: 'Electronics repair, appliance maintenance, and installation services',
+                serviceArea: 'Metro Manila and nearby provinces',
+                averageServiceFee: '₱500 - ₱2,000'
+            },
+            businessLegitimacy:{
+                businessPermit: 'BP-2021-12345',
+                businessPermitImage: '../../../Public/pictures/BFAR-Certificate-of-Registration-x1.webp',
+                dtiRegistration: 'DTI-NCR-2021-98765',
+                dtiRegistrationImage: '../../../Public/pictures/Sample-DTI-Permit.webp',
+                taxIndetificationNumber: '123-456-789-000',
+                taxIdetificationImage: '../../../Public/pictures/tin-id-card-sample.webp'
+            },
+            showImageModal: false,
+            currentImage: ''
         }
     },
     methods: {
@@ -61,6 +95,14 @@ const app = Vue.createApp({
                 logout: 'M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1'
             };
             return icons[iconName] || '';
+        },
+        openImageModal(imageSrc) {
+            this.currentImage = imageSrc;
+            this.showImageModal = true;
+        },
+        closeImageModal() {
+            this.showImageModal = false;
+            this.currentImage = '';
         }
     }
 })

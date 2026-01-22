@@ -68,7 +68,39 @@
     </header>
     <main class="transition-all duration-300 ease-in-out mt-10 px-10 py-10" :class="{'lg:ml-64': sidebarOpen}">
         <h1 class="font-medium text-2xl">Dashboard</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5 gap-4">
+            <div v-for="(group, index) in summaryGroups" :key="index" class="bg-white border border-gray-200 rounded-lg p-5">
+                <div class="flex items-center gap-4">
+                    <div :class="group.bgColor" class="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                        <svg :class="group.iconColor" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path :d="getIcon(group.icon)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm font-medium text-gray-400">{{ group.subHeading }}</p>
+                        <h1 class="text-3xl font-semibold text-black mt-3">{{ group.heading }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 mt-5 gap-4 lg:min-h-[650px]">
+            <!--Here Yung list ng business applicants-->
+            <div class="lg:col-span-2 bg-white rounded-lg border border-gray-200 p-10">
+                <h1 class="text-xl font-medium text-gray-900 mb-6">Recent Applications</h1>
+            </div>
+            <div class="lg:col-span-1 flex flex-col gap-4">
+                <div class="flex-1 bg-white rounded-lg border border-gray-200 p-6">
+                    <h1 class="text-xl font-medium text-gray-900 mb-6">Approve Request</h1>
+                </div>
+                <div class="flex-1 bg-white rounded-lg border border-gray-200 p-6">
+                    <h1 class="text-xl font-medium text-gray-900 mb-6">Pending Request</h1>
+                </div>
+            </div>
+        </div>
+
     </main>
+    <script src="../../../Public/js/Admin/dashboard.js"></script>
 </div>
 </body>
 </html>

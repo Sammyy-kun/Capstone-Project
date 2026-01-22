@@ -71,7 +71,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mt-5">
             <!--Here yung data tables tapos nasa left side siya-->
             <div class="lg:col-span-2 bg-white rounded-xl border border-gray-200 p-5">
-                <h1 class="font-medium text-lg">Available Products</h1>
+                <h1 class="font-medium text-xl">Available Products</h1>
             </div>
             <!--Adding Products-->
             <div class="lg:col-span-1 bg-white rounded-xl border border-gray-200 p-5 max-h-[calc(100vh-10rem)] overflow-y-auto">

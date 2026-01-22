@@ -26,7 +26,7 @@ const app = Vue.createApp({
                     title: 'Business',
                     isOpen: true,
                     items: [
-                        { name: 'Business Request', icon: 'business', link: '../Business/application.php', active: true }
+                        { name: 'Business Request', icon: 'business', link: '../Business/application.php', active: false }
                     ]
                 },
                 {
@@ -35,7 +35,7 @@ const app = Vue.createApp({
                     items: [
                         { name: 'Reports', icon: 'reports', link: '#', active: false },
                         { name: 'Settings', icon: 'settings', link: '#', active: false },
-                        { name: 'Logs', icon: 'logs', link: '../Logs/logs.php', active: false }
+                        { name: 'Logs', icon: 'logs', link: '../Logs/logs.php', active: true }
                     ]
                 }
             ],

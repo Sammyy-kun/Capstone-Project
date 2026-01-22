@@ -59,10 +59,12 @@
     </header>
     <main class="transition-all duration-300 ease-in-out mt-10 px-10 py-10" :class="{'lg:ml-64': sidebarOpen}">
         <div class="mt-8">
-           <a href="dashboard.php" class="flex items-center gap-2 font-medium text-lg hover:text-emerald-600 transition-colors mb-10 block">
-               <img src="../../../Public/pictures/arrow back.svg" alt="Back" class="w-6 h-6">
+           <a href="dashboard.php" class="group flex items-center gap-2 text-sm font-normal text-lg text-gray-700 hover:text-emerald-600 transition-colors mb-5 block">
+                <svg class="w-5 h-5 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
                Back to Product List
-           </a> 
+            </a> 
            
            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-white rounded-xl border border-gray-200 p-5">
                 <div class="space-y-4">

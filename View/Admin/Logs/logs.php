@@ -67,8 +67,14 @@
         </transition>
     </header>
     <main class="transition-all duration-300 ease-in-out mt-10 px-10 py-10" :class="{'lg:ml-64': sidebarOpen}">
-        <h1 class="font-medium text-2xl">Products</h1>
+        <h1 class="font-medium text-2xl">Logs</h1>
+
+         <div class="mt-5 bg-white border border-gray-200 rounded-lg p-10 lg:h-190">
+            <h1 class="text-xl font-medium text-gray-900 mb-6">Admin Action Logs</h1>
+            <!--Here yung data tables-->
+        </div>
     </main>
+    <script src="../../../Public/js/Admin/logs.js"></script>
 </div>
 </body>
 </html>

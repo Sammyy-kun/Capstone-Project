@@ -9,7 +9,7 @@
     </header>
     <main id="app" class="pt-20">
         <div class="mx-auto px-8 lg:px-40 ">
-            <h1 class="text-black text-3xl font-semibold mb-3">Business Form</h1>
+            <h1 class="text-black text-3xl font-bold mb-3">Business Form</h1>
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 mb-4">
             <div class="grid grid-cols-5">
                 <!--First Progress-->
@@ -313,7 +313,7 @@
         </div>
 
         <!--Buttons-->
-         <div class="flex justify-end mt-5 gap-4">
+        <div class="flex justify-end mt-5 gap-4">
             <button class="bg-gray-300 font-semibold w-48 py-4 px-5 rounded-lg text-black hover:bg-gray-400" @click="cancelBtn">Cancel</button>
             <button v-if="currentStep > 1" class="bg-gray-300 font-semibold w-48 py-4 px-5 rounded-lg text-black hover:bg-gray-400" @click="backBtn">Back</button>
             <button class="bg-emerald-500 font-semibold w-48 py-4 px-5 rounded-lg text-white hover:bg-emerald-600" @click="nextBtn">Next</button>
