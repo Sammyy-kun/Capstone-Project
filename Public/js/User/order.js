@@ -49,8 +49,41 @@ const app = Vue.createApp({
                         { name: 'Logout', icon: 'logout', link: '#' }
                     ]
                 },
+            ],
 
-
+            orders:[
+                {
+                    orderId: 'ABC-6457325',
+                    productName: 'Blue & pink Silk Saree | Linen Kurta | Printed black & white short kurti & 2 more items',
+                    productImage: '../../../Public/pictures/—Pngtree—a modern electric fan_16046829.png',
+                    totalPrice: 12500,
+                    date: '10 May 2021',
+                    status: 'In progress'
+                },
+                {
+                    orderId: 'DEF-7892451',
+                    productName: 'Electric Fan - Standing fan with oscillation and adjustable speed settings',
+                    productImage: '../../../Public/pictures/—Pngtree—a modern electric fan_16046829.png',
+                    totalPrice: 2499,
+                    date: '15 May 2021',
+                    status: 'Delivered'
+                },
+                {
+                    orderId: 'DEF-7892451',
+                    productName: 'Electric Fan - Standing fan with oscillation and adjustable speed settings',
+                    productImage: '../../../Public/pictures/—Pngtree—a modern electric fan_16046829.png',
+                    totalPrice: 2499,
+                    date: '15 May 2021',
+                    status: 'In progress'
+                },
+                {
+                    orderId: 'DEF-7892451',
+                    productName: 'Electric Fan - Standing fan with oscillation and adjustable speed settings',
+                    productImage: '../../../Public/pictures/—Pngtree—a modern electric fan_16046829.png',
+                    totalPrice: 2499,
+                    date: '15 May 2021',
+                    status: 'Delivered'
+                }
             ]
         }
     },

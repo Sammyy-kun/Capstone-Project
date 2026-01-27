@@ -140,7 +140,52 @@
     </header>
     <main class="transition-all duration-300 ease-in-out mt-10 px-10 py-10" :class="{'lg:ml-64': sidebarOpen}">
         <h1 class="font-medium text-2xl">Orders</h1>
-        <div class="mt-8">
+        <div class="mt-8 space-y-4">
+            <div v-for="(order, index) in orders" :key="index" class="bg-white rounded-lg border border-gray-200 shadow-sm cursor-pointer">
+                <div class="p-5">
+                    <!-- Status and Date -->
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full" :class="{
+                            'bg-orange-100': order.status === 'In progress',
+                            'bg-green-100': order.status === 'Delivered',
+                            'bg-blue-100': order.status === 'Processing',
+                            'bg-red-100': order.status === 'Cancelled'
+                        }">
+                            <span class="w-2 h-2 rounded-full" :class="{
+                                'bg-orange-500': order.status === 'In progress',
+                                'bg-green-500': order.status === 'Delivered',
+                                'bg-blue-500': order.status === 'Processing',
+                                'bg-red-500': order.status === 'Cancelled'
+                            }"></span>
+                            <span class="text-sm font-medium" :class="{
+                                'text-orange-600': order.status === 'In progress',
+                                'text-green-600': order.status === 'Delivered',
+                                'text-blue-600': order.status === 'Processing',
+                                'text-red-600': order.status === 'Cancelled'
+                            }">{{ order.status }}</span>
+                        </div>
+                        <span class="text-sm text-gray-500">{{ order.date }}</span>
+                    </div>
+
+                    <!-- Order Content -->
+                    <div class="flex items-center gap-4">
+                        <img :src="order.productImage" alt="" class="w-16 h-16 object-cover rounded-md bg-gray-100">
+                    
+                        <div class="flex-1">
+                            <h3 class="text-sm font-semibold text-gray-900 mb-1">Order ID: {{ order.orderId }}</h3>
+                            <p class="text-sm text-gray-600 mb-2">{{ order.productName }}</p>
+                            <p class="text-base font-semibold text-gray-900">₱ {{ order.totalPrice.toLocaleString() }}</p>
+                        </div>
+
+
+                        <div class="ml-auto">
+                            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>  
     </main>
     <script src="../../../Public/js/User/order.js"></script>

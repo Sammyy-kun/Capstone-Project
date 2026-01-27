@@ -139,28 +139,45 @@
         </transition>
     </header>
     <main class="transition-all duration-300 ease-in-out mt-10 px-10 py-10" :class="{'lg:ml-64': sidebarOpen}">
-        <h1 class="font-medium text-2xl">Products</h1>
-        <div class="flex flex-col sm:flex-row gap-4 mt-5 items-start sm:items-center justify-between">
-            <form class="sm:flex sm:items-center flex-1">
-                <input v-model="searchQuery" id="q" name="q" class="inline w-full rounded-md border border-gray-300 bg-white py-2 pl-3 pr-3 leading-5 placeholder-gray-500 focus:border-emerald-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-emerald-500 sm:text-sm" placeholder="Search products..." type="search" autofocus="">
-            </form>
-            
-            <div class="flex items-center gap-2">
-                <label for="sort" class="text-sm text-gray-600">Sort by:</label>
-                <select v-model="sortBy" id="sort" class="rounded-md border border-gray-300 bg-white py-2 pl-3 pr-10 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500">
-                    <option value="name-asc">Name (A-Z)</option>
-                    <option value="name-desc">Name (Z-A)</option>
-                    <option value="price-asc">Price (Low to High)</option>
-                    <option value="price-desc">Price (High to Low)</option>
-                    <option value="newest">Newest First</option>
-                    <option value="oldest">Oldest First</option>
-                </select>
+        <h1 class="font-medium text-2xl mb-6">Products</h1>
+        
+        <!-- Search Bar -->
+        <div class="mb-5">
+            <div class="relative max-w-md">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+                <input v-model="searchQuery" type="search" class="block w-full pl-10 pr-3 py-2.5 border-2 border-emerald-500 rounded-lg focus:outline-none focus:ring-0 focus:border-emerald-500 text-sm" placeholder="Search products...">
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <div class="border-b border-gray-200">
+                <nav class="-mb-px flex space-x-6" aria-label="Tabs">
+                    <button @click="sortBy = 'all'" :class="sortBy === 'all' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'" class="whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm transition-colors">
+                        All Products
+                    </button>
+                    <button @click="sortBy = 'newest'" :class="sortBy === 'newest' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'" class="whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm transition-colors">
+                        New Arrivals
+                    </button>
+                    <button @click="sortBy = 'price-asc'" :class="sortBy === 'price-asc' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'" class="whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm transition-colors">
+                        Price: Low to High
+                    </button>
+                    <button @click="sortBy = 'price-desc'" :class="sortBy === 'price-desc' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'" class="whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm transition-colors">
+                        Price: High to Low
+                    </button>
+                    <button @click="sortBy = 'name-asc'" :class="sortBy === 'name-asc' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'" class="whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm transition-colors">
+                        A-Z
+                    </button>
+                </nav>
             </div>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8 ">
             <div v-for="product in sortedProducts" :key="product.id" class="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col">
-                <div class="relative h-56 bg-gray-50 flex items-center justify-center p-8">
+                <div class="relative h-56 bg-gray-50 flex items-center justify-center p-8 ">
                     <img :src="product.image" :alt="product.name" class="w-full h-full object-contain" @error="handleImageError">
                     <span v-if="product.stock <= 0" class="absolute top-3 right-3 bg-red-500 text-white text-xs px-3 py-1 rounded-full font-medium">Out of Stock</span>
                     <span v-else-if="product.stock < 10" class="absolute top-3 right-3 bg-yellow-500 text-white text-xs px-3 py-1 rounded-full font-medium">Low Stock</span>

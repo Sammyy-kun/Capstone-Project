@@ -10,7 +10,7 @@ const app = Vue.createApp({
                 image: '../../../Public/pictures/profile pic.jpg'
             },
             searchQuery: '',
-            sortBy: 'name-asc',
+            sortBy: 'all',
             products: [
                 { id: 1, name: 'Whirlpool Refrigerator', description: 'Spacious side-by-side refrigerator with water dispenser', price: 59999, stock: 15, image: '../../../Public/pictures/LG-Refrigerator-PNG-Transparent-Image.png', category: 'Refrigerator', date: '2024-01-15' },
                 { id: 2, name: 'Samsung Refrigerator', description: 'Premium double door refrigerator with smart cooling technology', price: 45999, stock: 8, image: '../../../Public/pictures/pngimg.com - refrigerator_PNG101548.png', category: 'Refrigerator', date: '2024-02-10' },
@@ -91,6 +91,8 @@ const app = Vue.createApp({
             const products = [...this.filteredProducts];
             
             switch(this.sortBy) {
+                case 'all':
+                    return products;
                 case 'name-asc':
                     return products.sort((a, b) => a.name.localeCompare(b.name));
                 case 'name-desc':
