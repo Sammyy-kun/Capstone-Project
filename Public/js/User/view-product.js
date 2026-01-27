@@ -3,6 +3,8 @@ const app = Vue.createApp({
         return{
             //Sidebar
             sidebarOpen: true,
+            cartOpen: false,
+            cart: [],
             user: {
                 name: 'Van Keymel',
                 image: '../../../Public/pictures/profile pic.jpg'
@@ -19,7 +21,7 @@ const app = Vue.createApp({
                     title: 'Shop',
                     isOpen: true,
                     items: [
-                        { name: 'My Orders', icon: 'orders', link: '#' },
+                        { name: 'My Orders', icon: 'orders', link: 'order.php' },
                         { name: 'Wishlist', icon: 'wishlist', link: '#' }
                     ]
                 },
@@ -72,9 +74,87 @@ const app = Vue.createApp({
                 }
         }
     },
+    computed: {
+        cartItemCount() {
+            return this.cart.reduce((total, item) => total + item.quantity, 0);
+        },
+        selectedItemCount() {
+            return this.cart.filter(item => item.selected).reduce((total, item) => total + item.quantity, 0);
+        },
+        cartTotal() {
+            return this.cart.filter(item => item.selected).reduce((total, item) => total + (item.price * item.quantity), 0);
+        },
+        allSelected() {
+            return this.cart.length > 0 && this.cart.every(item => item.selected);
+        }
+    },
     methods: {
         toggleSidebar() {
             this.sidebarOpen = !this.sidebarOpen;
+        },
+        toggleCart() {
+            this.cartOpen = !this.cartOpen;
+        },
+        addToCart() {
+            if (this.product.stock <= 0) {
+                alert('This product is out of stock');
+                return;
+            }
+            
+            const existingItem = this.cart.find(item => item.id === this.product.name);
+            if (existingItem) {
+                if (existingItem.quantity < this.product.stock) {
+                    existingItem.quantity++;
+                } else {
+                    alert('Cannot add more items than available stock');
+                    return;
+                }
+            } else {
+                this.cart.push({
+                    id: this.product.name,
+                    name: this.product.name,
+                    price: this.product.price,
+                    image: this.product.image,
+                    quantity: 1,
+                    stock: this.product.stock,
+                    selected: true
+                });
+            }
+            
+            this.cartOpen = true;
+        },
+        removeFromCart(index) {
+            this.cart.splice(index, 1);
+        },
+        updateQuantity(item, change) {
+            const newQuantity = item.quantity + change;
+            if (newQuantity > 0 && newQuantity <= item.stock) {
+                item.quantity = newQuantity;
+            }
+        },
+        clearCart() {
+            if (confirm('Are you sure you want to clear your cart?')) {
+                this.cart = [];
+            }
+        },
+        toggleItemSelection(item) {
+            item.selected = !item.selected;
+        },
+        toggleAllSelection() {
+            const newState = !this.allSelected;
+            this.cart.forEach(item => {
+                item.selected = newState;
+            });
+        },
+        proceedToCheckout() {
+            const selectedItems = this.cart.filter(item => item.selected);
+            if (selectedItems.length === 0) {
+                alert('Please select at least one item to checkout');
+                return;
+            }
+            // Here you can add checkout logic
+            console.log('Proceeding to checkout with:', selectedItems);
+            alert(`Proceeding to checkout with ${selectedItems.length} item(s)`);
         },
         toggleMenu(index) {
             this.menuGroups[index].isOpen = !this.menuGroups[index].isOpen;

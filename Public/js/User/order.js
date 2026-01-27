@@ -1,39 +1,27 @@
 const app = Vue.createApp({
     data(){
         return{
+             //Sidebar
             sidebarOpen: true,
             cartOpen: false,
             cart: [],
             user: {
-                //Here dapat kukunin yung name from database kase dynamic
                 name: 'Van Keymel',
                 image: '../../../Public/pictures/profile pic.jpg'
             },
-            searchQuery: '',
-            sortBy: 'name-asc',
-            products: [
-                { id: 1, name: 'Whirlpool Refrigerator', description: 'Spacious side-by-side refrigerator with water dispenser', price: 59999, stock: 15, image: '../../../Public/pictures/LG-Refrigerator-PNG-Transparent-Image.png', category: 'Refrigerator', date: '2024-01-15' },
-                { id: 2, name: 'Samsung Refrigerator', description: 'Premium double door refrigerator with smart cooling technology', price: 45999, stock: 8, image: '../../../Public/pictures/pngimg.com - refrigerator_PNG101548.png', category: 'Refrigerator', date: '2024-02-10' },
-                { id: 3, name: 'LG Washing Machine', description: 'Front-load washer with digital display and multiple wash programs', price: 28500, stock: 5, image: '../../../Public/pictures/vecteezy_modern-silver-washing-machine-with-digital-display-and-sleek_55983209.png', category: 'Washing Machine', date: '2024-01-20' },
-                { id: 4, name: 'Smart TV 55 inch', description: 'Versatile tablet for work and play', price: 38999, stock: 20, image: '../../../Public/pictures/vecteezy_black-tv-screen-with-blank-screen_46013247.png', category: 'Television', date: '2024-03-01' },
-                { id: 5, name: 'Panasonic Air Conditioner', description: 'Inverter split-type AC with powerful cooling and energy-saving features', price: 32900, stock: 0, image: '../../../Public/pictures/Air-Conditioner-Transparent-Images-PNG.png', category: 'Air Conditioner', date: '2024-02-15' },
-                { id: 6, name: 'Electric Fan', description: 'Standing fan with oscillation and adjustable speed settings', price: 2499, stock: 12, image: '../../../Public/pictures/—Pngtree—a modern electric fan_16046829.png', category: 'Fan', date: '2024-01-25' },
-                { id: 7, name: 'Microwave Oven', description: 'Compact microwave with auto-cook menus and defrost function', price: 6999, stock: 3, image: '../../../Public/pictures/microwave.png', category: 'Microwave', date: '2024-02-20' },
-                { id: 8, name: 'Water Dispenser', description: 'Hot and cold water dispenser with safety lock feature', price: 5999, stock: 18, image: '../../../Public/pictures/water dispenser.png', category: 'Water Dispenser', date: '2024-03-05' }
-            ],
             menuGroups: [
                 {
                     title: 'Main',
                     isOpen: true,
                     items: [
-                        { name: 'Dashboard', icon: 'dashboard', link: 'dashboard.php', active: true }
+                        { name: 'Dashboard', icon: 'dashboard', link: 'dashboard.php', }
                     ]
                 },
                 {
                     title: 'Shop',
                     isOpen: true,
                     items: [
-                        { name: 'My Orders', icon: 'orders', link: 'order.php' },
+                        { name: 'My Orders', icon: 'orders', link: 'order.php', active: true },
                         { name: 'Wishlist', icon: 'wishlist', link: '#' }
                     ]
                 },
@@ -60,7 +48,9 @@ const app = Vue.createApp({
                         { name: 'Support', icon: 'support', link: '#' },
                         { name: 'Logout', icon: 'logout', link: '#' }
                     ]
-                }
+                },
+
+
             ]
         }
     },
@@ -76,64 +66,14 @@ const app = Vue.createApp({
         },
         allSelected() {
             return this.cart.length > 0 && this.cart.every(item => item.selected);
-        },
-        filteredProducts() {
-            if (!this.searchQuery) {
-                return this.products;
-            }
-            const query = this.searchQuery.toLowerCase();
-            return this.products.filter(product => 
-                product.name.toLowerCase().includes(query) ||
-                product.description.toLowerCase().includes(query)
-            );
-        },
-        sortedProducts() {
-            const products = [...this.filteredProducts];
-            
-            switch(this.sortBy) {
-                case 'name-asc':
-                    return products.sort((a, b) => a.name.localeCompare(b.name));
-                case 'name-desc':
-                    return products.sort((a, b) => b.name.localeCompare(a.name));
-                case 'price-asc':
-                    return products.sort((a, b) => a.price - b.price);
-                case 'price-desc':
-                    return products.sort((a, b) => b.price - a.price);
-                case 'newest':
-                    return products.sort((a, b) => new Date(b.date) - new Date(a.date));
-                case 'oldest':
-                    return products.sort((a, b) => new Date(a.date) - new Date(b.date));
-                default:
-                    return products;
-            }
         }
     },
-    methods: {
+    methods:{
         toggleSidebar() {
             this.sidebarOpen = !this.sidebarOpen;
         },
         toggleCart() {
             this.cartOpen = !this.cartOpen;
-        },
-        addToCart(product) {
-            const existingItem = this.cart.find(item => item.id === product.id);
-            if (existingItem) {
-                if (existingItem.quantity < product.stock) {
-                    existingItem.quantity++;
-                }
-            } else {
-                this.cart.push({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                    image: product.image,
-                    quantity: 1,
-                    stock: product.stock,
-                    selected: true
-                });
-            }
-            
-            this.cartOpen = true;
         },
         removeFromCart(index) {
             this.cart.splice(index, 1);
@@ -171,6 +111,9 @@ const app = Vue.createApp({
         toggleMenu(index) {
             this.menuGroups[index].isOpen = !this.menuGroups[index].isOpen;
         },
+        handleImageError(event) {
+            event.target.src = 'https://via.placeholder.com/300x300/f3f4f6/6b7280?text=No+Image';
+        },
         getIcon(iconName) {
             const icons = {
                 dashboard: 'M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17',
@@ -184,9 +127,6 @@ const app = Vue.createApp({
                 logout: 'M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1'
             };
             return icons[iconName] || '';
-        },
-        handleImageError(event) {
-            event.target.src = 'https://via.placeholder.com/300x300/f3f4f6/6b7280?text=No+Image';
         }
     }
 })

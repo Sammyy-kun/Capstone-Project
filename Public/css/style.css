@@ -32,6 +32,57 @@ section {
   width: 100%;
 } 
 
+/* Slide in animation for sidebar */
+.slide-in-enter-active, .slide-in-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-in-enter-from {
+  transform: translateX(-100%);
+}
+
+.slide-in-leave-to {
+  transform: translateX(-100%);
+}
+
+/* Slide in from right animation for cart */
+.slide-in-right-enter-active, .slide-in-right-leave-active {
+  transition: transform 0.3s ease;
+}
+
+.slide-in-right-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-in-right-leave-to {
+  transform: translateX(100%);
+}
+
+/* Slide fade animation for menu items */
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.slide-fade-enter-from {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 
 
 

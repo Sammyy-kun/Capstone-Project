@@ -42,7 +42,7 @@
                         <transition name="slide-fade">
                             <div v-show="group.isOpen" class="mt-2 space-y-1">
                                 <a v-for="item in group.items" :key="item.name" :href="item.link" 
-                                   :class="item.active ? 'text-gray-700 bg-gray-100' : 'text-gray-600 hover:bg-gray-100 hover:text-gray-700'"
+                                   :class="item.active ? 'text-emerald-600 bg-emerald-50' : 'text-gray-600 hover:bg-gray-100 hover:text-gray-700'"
                                    class="flex items-center px-4 py-2 text-sm transition-colors duration-300 transform rounded-md">
                                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path :d="getIcon(item.icon)" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
