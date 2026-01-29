@@ -1,4 +1,6 @@
 <?php require '../../Layouts/header.php'; ?>
+<form action="backend/register_owner.php" method="POST">
+
 <body>
     <!--Navbar to-->
     <header>
